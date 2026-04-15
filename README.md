@@ -3,7 +3,7 @@
 ##  Overview
 
 A responsive and accessible Profile Card built with HTML, CSS, and vanilla JavaScript.
-This project satisfies all required specifications for Stage 1B.
+This project satisfies all required specifications for Stage 1B..
 
 ---
 
