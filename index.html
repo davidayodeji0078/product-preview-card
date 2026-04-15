@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Card</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<button id="themeToggle" aria-label="Toggle dark and light mode">
+  Toggle Theme
+</button>
+
+<article data-testid="test-profile-card" class="card">
+
+  <header>
+    <h2 data-testid="test-user-name">Ayodeji David</h2>
+  </header>
+
+  <div class="card-content">
+
+    <figure>
+      <img 
+        id="avatar"
+        src="https://via.placeholder.com/150"
+        alt="Portrait of Ayodeji David"
+        data-testid="test-user-avatar"
+      />
+      <figcaption>Frontend Developer</figcaption>
+
+      <input type="file" id="upload" accept="image/*" aria-label="Upload profile image" />
+    </figure>
+
+    <div class="info">
+
+      <p data-testid="test-user-bio">
+        Passionate frontend developer who enjoys building accessible and responsive web applications.
+      </p>
+
+      <p>
+        Current Time (ms): 
+        <span id="time" data-testid="test-user-time" aria-live="polite"></span>
+      </p>
+
+      <nav aria-label="Social links">
+        <ul data-testid="test-user-social-links">
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+              data-testid="test-user-social-twitter">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+              data-testid="test-user-social-github">GitHub</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin">LinkedIn</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <h3>Hobbies</h3>
+        <ul data-testid="test-user-hobbies">
+          <li>Coding</li>
+          <li>Reading</li>
+          <li>Gaming</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Dislikes</h3>
+        <ul data-testid="test-user-dislikes">
+          <li>Slow internet</li>
+          <li>Messy code</li>
+          <li>Procrastination</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+</article>
+
+<script src="script.js"></script>
+</body>
+</html>

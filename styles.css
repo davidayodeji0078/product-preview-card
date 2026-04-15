@@ -1,0 +1,142 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --text-color: #ffffff;
+  --accent: #ffd166;
+}
+
+body.light {
+  --bg-gradient: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card {
+  backdrop-filter: blur(14px);
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 25px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 850px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+figure {
+  text-align: center;
+}
+
+figure img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info p {
+  line-height: 1.6;
+}
+
+#time {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.2);
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #ffffff;
+  color: #333;
+}
+
+a:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+section {
+  background: rgba(255,255,255,0.08);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+section h3 {
+  margin-bottom: 6px;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .card-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  figure {
+    flex: 1;
+  }
+
+  .info {
+    flex: 2;
+  }
+}
